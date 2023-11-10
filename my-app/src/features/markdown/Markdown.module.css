@@ -1,6 +1,13 @@
 .markdown {
-    background-color: red;
-    color: white;
-    width: 50%;
-    height: 70vh;
+    background-color:snow;
+    color: black;
+    width: 60%;
+    height: 95%;
+
 }
+
+.markImg {
+    max-width: 100%;
+    height: auto;
+}
+

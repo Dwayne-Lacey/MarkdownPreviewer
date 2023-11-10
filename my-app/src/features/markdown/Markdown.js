@@ -17,29 +17,40 @@ export function MarkdownApp() {
 
     return (
         <div>
-        <div>
-            <button
-            aria-label="Toggle markdown editor fullscreen"
-            onClick={() => dispatch(setInputFullscreen())}
-            >
-                Toggle Input Fullscreen
-            </button>
-            <textarea
-            aria-label="Set markdown editor text"
-            value={markdown}
-            onChange={(e) => dispatch(setMarkdownText(e.target.value))}
-            type="text"
-            />
-        </div>
-        <div style={{backgroundColor: 'red'}}>
-            <button
-            aria-label="Toggle markdown previewer fullscreen"
-            onClick={() => dispatch(setOutputFullscreen())}
-            >
-                Toggle Output Fullscreen
-            </button>
-            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} className={styles.markdown}></ReactMarkdown>
-        </div>
+            <div>
+                <button
+                aria-label="Toggle markdown editor fullscreen"
+                onClick={() => dispatch(setInputFullscreen())}
+                >
+                    Toggle Input Fullscreen
+                </button>
+                <textarea
+                aria-label="Set markdown editor text"
+                value={markdown}
+                onChange={(e) => dispatch(setMarkdownText(e.target.value))}
+                type="text"
+                />
+            </div>
+            <div>
+                <div aria-label="Markdown previewer header bar">
+
+                    <button
+                    aria-label="Toggle markdown previewer fullscreen"
+                    onClick={() => dispatch(setOutputFullscreen())}
+                    >
+                        Toggle Output Fullscreen
+                    </button>
+                </div>
+                
+                <ReactMarkdown 
+                children={markdown} 
+                remarkPlugins={[remarkGfm]} 
+                className={styles.markdown}
+                components={{
+                    img: ({node, ...props}) => <img className={styles.markImg} {...props} />
+                }}
+                />
+            </div>
         </div>
   );
 }
