@@ -1,1 +1,6 @@
-
+.markdown {
+    background-color: red;
+    color: white;
+    width: 50%;
+    height: 70vh;
+}

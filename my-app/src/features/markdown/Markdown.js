@@ -8,6 +8,7 @@ import {
 } from './markdownSlice';
 import styles from './Markdown.module.css';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export function MarkdownApp() {
     
@@ -37,7 +38,7 @@ export function MarkdownApp() {
             >
                 Toggle Output Fullscreen
             </button>
-            <ReactMarkdown source={markdown}></ReactMarkdown>
+            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} className={styles.markdown}></ReactMarkdown>
         </div>
         </div>
   );
