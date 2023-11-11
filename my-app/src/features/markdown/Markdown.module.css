@@ -11,3 +11,12 @@
     height: auto;
 }
 
+.markPre {
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+
+.markCode {
+    background-color: rgb(36, 36, 36);
+    color: white;
+}

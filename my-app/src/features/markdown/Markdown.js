@@ -47,7 +47,9 @@ export function MarkdownApp() {
                 remarkPlugins={[remarkGfm]} 
                 className={styles.markdown}
                 components={{
-                    img: ({node, ...props}) => <img className={styles.markImg} {...props} />
+                    img: ({node, ...props}) => <img className={styles.markImg} {...props} />,
+                    pre: ({node, ...props}) => <pre className={styles.markPre} {...props} />,
+                    code: ({node, ...props}) => <code className={styles.markCode} {...props} />
                 }}
                 />
             </div>
