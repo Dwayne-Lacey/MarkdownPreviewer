@@ -35,7 +35,7 @@ export function MarkdownApp() {
                     aria-label="Toggle markdown editor fullscreen"
                     onClick={() => dispatch(setInputFullscreen())}
                     >
-                        <FontAwesomeIcon className={styles.icon} icon={faMaximize} />
+                        <FontAwesomeIcon title="Fullscreen" className={styles.icon} icon={faMaximize} />
                     </button>
                 </div>
                 
@@ -57,7 +57,7 @@ export function MarkdownApp() {
                     aria-label="Toggle markdown previewer fullscreen"
                     onClick={() => dispatch(setOutputFullscreen())}
                     >
-                        <FontAwesomeIcon className={styles.icon} icon={faMaximize} />
+                        <FontAwesomeIcon title="Fullscreen" className={styles.icon} icon={faMaximize} />
                     </button>
                 </div>
                 
