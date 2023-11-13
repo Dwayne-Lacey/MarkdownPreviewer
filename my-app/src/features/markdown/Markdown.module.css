@@ -3,7 +3,59 @@
     color: black;
     width: 60%;
     height: 95%;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.7rem;
 
+}
+
+.preview {
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: snow;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 400px;
+}
+
+.previewFull {
+    padding-bottom: 10rem;
+}
+
+.editor {
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: snow;
+    width: 85%;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
+.textEditor {
+    width: 95%;
+    margin: 1rem auto 1rem;
+    padding: 0;
+    display: block;
+    border-radius: 0 0 21px 21px;
+    max-width: 95%;
+    min-width: 95%;
+}
+
+.textEditorMin {
+    height: 200px;
+}
+
+.textEditorFull {
+    height: 90vh;
+}
+
+.titleBar {
+    background-color: #FFC145;
+    display: flex;
+    border-radius: 23px 23px 0 0;
+    justify-content: space-evenly;
+    border-bottom: thick double black;
 }
 
 .markImg {
@@ -14,9 +66,37 @@
 .markPre {
     background-color: rgb(36, 36, 36);
     color: white;
+    padding: 1rem;
 }
 
 .markCode {
     background-color: rgb(36, 36, 36);
     color: white;
+    min-width: 0;
+    text-wrap: wrap;
+}
+
+.markTable {
+    border: 2px solid black;
+    text-align: left;
+    border-spacing: 0;
+}
+
+.markTh {
+    border-right: 2px solid black;
+    padding: .5rem .5rem;
+}
+
+.markTh:nth-of-type(3) {
+    border-right: none;
+}
+
+.markTd {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    padding: .2rem .5rem;
+}
+
+.markTd:nth-of-type(3) {
+    border-right: none;
 }

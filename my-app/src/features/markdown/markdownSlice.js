@@ -72,6 +72,8 @@ export const markdownSlice = createSlice({
 
 export const { setInputFullscreen, setOutputFullscreen, setMarkdownText } = markdownSlice.actions;
 export const selectMarkdown = (state) => state.markdown.value;
+export const selectInput = (state) => state.markdown.inputFullscreen;
+export const selectOutput = (state) => state.markdown.outputFullscreen;
 
 
 export default markdownSlice.reducer;
