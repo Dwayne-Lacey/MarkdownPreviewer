@@ -45,7 +45,7 @@
 .textEditor {
     width: 95%;
     margin: 1rem auto 1rem;
-    padding: 0;
+    padding: 1rem;
     display: block;
     border-radius: 0 0 21px 21px;
     max-width: 95%;

@@ -40,6 +40,7 @@ export function MarkdownApp() {
                 </div>
                 
                 <textarea
+                id="editor"
                 aria-label="Set markdown editor text"
                 value={markdown}
                 onChange={(e) => dispatch(setMarkdownText(e.target.value))}
@@ -60,20 +61,22 @@ export function MarkdownApp() {
                         <FontAwesomeIcon title="Fullscreen" className={styles.icon} icon={faMaximize} />
                     </button>
                 </div>
-                
-                <ReactMarkdown 
-                children={markdown} 
-                remarkPlugins={[remarkGfm]} 
-                className={styles.markdown}
-                components={{
-                    img: ({node, ...props}) => <img className={styles.markImg} alt="Markdown preview" {...props} />,
-                    pre: ({node, ...props}) => <pre className={styles.markPre} {...props} />,
-                    code: ({node, ...props}) => <code className={styles.markCode} {...props} />,
-                    table: ({node, ...props}) => <table className={styles.markTable} {...props} />,
-                    td: ({node, ...props}) => <td className={styles.markTd} {...props} />,
-                    th: ({node, ...props}) => <th className={styles.markTh} {...props} />
-                }}
-                />
+                <div id="preview" className={styles.markdown}>
+                    <ReactMarkdown 
+
+                    children={markdown} 
+                    remarkPlugins={[remarkGfm]} 
+                    
+                    components={{
+                        img: ({node, ...props}) => <img className={styles.markImg} alt="Markdown preview" {...props} />,
+                        pre: ({node, ...props}) => <pre className={styles.markPre} {...props} />,
+                        code: ({node, ...props}) => <code className={styles.markCode} {...props} />,
+                        table: ({node, ...props}) => <table className={styles.markTable} {...props} />,
+                        td: ({node, ...props}) => <td className={styles.markTd} {...props} />,
+                        th: ({node, ...props}) => <th className={styles.markTh} {...props} />
+                    }}
+                    />
+                </div>
             </div>
             }
         </div>
