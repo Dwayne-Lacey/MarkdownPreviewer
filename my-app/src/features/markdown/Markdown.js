@@ -11,7 +11,8 @@ import {
 import styles from './Markdown.module.css';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMaximize } from '@fortawesome/free-solid-svg-icons'
 export function MarkdownApp() {
     
     const markdown = useSelector(selectMarkdown);
@@ -28,12 +29,13 @@ export function MarkdownApp() {
             {!outputFullscreen && //Only show input window when output is not fullscreen
             <div className={styles.editor}>
                 <div className={styles.titleBar} aria-label="Markdown editor">
-                    <h1>Markdown Editor</h1>
+                    <h1 className={styles.title}>Markdown Editor</h1>
                     <button
+                    className={styles.fullscreen}
                     aria-label="Toggle markdown editor fullscreen"
                     onClick={() => dispatch(setInputFullscreen())}
                     >
-                        Toggle Input Fullscreen
+                        <FontAwesomeIcon className={styles.icon} icon={faMaximize} />
                     </button>
                 </div>
                 
@@ -49,12 +51,13 @@ export function MarkdownApp() {
             {!inputFullscreen && //Only show output window when input is not fullscreen
             <div className={styles.preview + ' ' + outputStyle}>
                 <div className={styles.titleBar} aria-label="Markdown previewer header bar">
-                    <h1>Markdown Preview</h1>
+                    <h1 className={styles.title}>Markdown Preview</h1>
                     <button
+                    className={styles.fullscreen}
                     aria-label="Toggle markdown previewer fullscreen"
                     onClick={() => dispatch(setOutputFullscreen())}
                     >
-                        Toggle Output Fullscreen
+                        <FontAwesomeIcon className={styles.icon} icon={faMaximize} />
                     </button>
                 </div>
                 
