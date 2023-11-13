@@ -63,10 +63,8 @@ export function MarkdownApp() {
                 </div>
                 <div id="preview" className={styles.markdown}>
                     <ReactMarkdown 
-
                     children={markdown} 
                     remarkPlugins={[remarkGfm]} 
-                    
                     components={{
                         img: ({node, ...props}) => <img className={styles.markImg} alt="Markdown preview" {...props} />,
                         pre: ({node, ...props}) => <pre className={styles.markPre} {...props} />,
