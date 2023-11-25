@@ -16,7 +16,7 @@
     width: 95%;
     margin: 0 auto;
     max-width: 1000px;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 .title {
@@ -37,19 +37,17 @@
     border: 2px solid black;
     border-radius: 25px;
     background-color: snow;
-    width: 85%;
+    width: 80%;
     margin: 0 auto 2rem;
     max-width: 800px;
 }
 
 .textEditor {
-    width: 95%;
+    width: 90%;
     margin: 1rem auto 1rem;
     padding: 1rem;
     display: block;
     border-radius: 0 0 21px 21px;
-    max-width: 95%;
-    min-width: 95%;
 }
 
 .textEditorMin {
